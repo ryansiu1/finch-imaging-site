@@ -1,0 +1,36 @@
+/*positioning styling for the map body*/
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.map-overlay-data {
+    position: relative;
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.8); /*makes the background white*/
+    width: 260px;
+    top: 0;
+    left: 25px;
+    margin-top: 10px;
+    padding: 10px; /*adds padding so that it does not look cramped*/
+    overflow: visible;
+}
+
+/* created a textbox that will display the area */
+.textbox {
+    position: absolute;
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: #f1f1f142;
+    color: rgb(231, 226, 226);
+    width: 260px;
+    top: 73px;
+    left: 325px;
+    margin-top: 10px;
+    padding: 10px;
+    overflow: visible;
+
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINCH Imaging Site</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+        type="text/css">
+    <!-- Bootstrap styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Adding the map element to our webpage-->
+    <div id='map' class='map'></div>
+
+    <!-- INTERACTIVITY -->
+    <div class='map-data'>
+        <label>Filter map view</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="legendcheck">
+            <label class="form-check-label" for="flexCheckDefault">
+                Legend
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="layercheck" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Layer
+            </label>
+        </div>
+
+    </div>
+
+    <div class="textbox">
+        <div id="indicator"></div>
+    </div>
+
+    <!-- MAP OVERLAY (FOR INTERACTIVE FEATURES) -->
+    <div class='map-overlay-data'> <!-- this div class creates an overlay/background to place features on top of -->
+        <label>Filter map view</label>
+        <!-- FILTER FEATURES (INTERACTIVE CHECKBOXES) -->
+        <div class="form-check">
+            <!-- Allows users to view or remove the original -->
+            <input class="form-check-input" type="checkbox" value="" id="originalCheck">
+            <!-- Default is set to unchecked (neighbourhoods show by default) -->
+            <label class="form-check-label" for="flexCheckChecked">
+                Original
+            </label>
+        </div>
+
+        <div class="form-check"> <!-- Allows users to view or remove the layer of proposed -->
+            <input class="form-check-input" type="checkbox" value="" id="proposedCheck" checked>
+            <!-- Default is set to checked -->
+            <label class="form-check-label" for="flexCheckChecked">
+                Proposed
+            </label>
+        </div>
+    </div>
+
+
+    <div class="textbox" style="text-align:center" id="indicator">
+        <br>
+        <br>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
